@@ -1,0 +1,1 @@
+set classpath=C:\Program Files\Apache Software Foundation\Tomcat 6.0\lib\activation.jar;C:\Program Files\Apache Software Foundation\Tomcat 6.0\lib\mail.jar;C:\Program Files\Apache Software Foundation\Tomcat 6.0\lib\soap.jar;C:\Program Files\Apache Software Foundation\Tomcat 6.0\lib\xerces.jar;C:\Program Files\Apache Software Foundation\Tomcat 6.0\lib\servlet-api.jar;.
