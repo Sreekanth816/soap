@@ -41,11 +41,11 @@ public class Person extends Object {
         this.age = age;
     }
 
-	public Address getAddressObj() {
+	public Address getAddress() {
 		return address;
 	}
-	public void setAddressObj(Address add) {
-		address = add;
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
-    
 }
