@@ -1,9 +1,19 @@
-<isd:service xmlns:isd="http://xml.apache.org/xml-soap/deployment"
-    id="urn:onjavaserver">
-        <isd:provider type="java"
-            scope="Application"
-            methods="add subtract">
-            <isd:java class="onjava.CalcService"/>
-        </isd:provider>
-    <isd:faultListener>org.apache.soap.server.DOMFaultListener</isd:faultListener>
+<isd:service xmlns:isd="http://xml.apache.org/xml-soap/deployment" id="urn:onjavaserver">
+	<isd:provider type="java" scope="Application" methods="getSalary getTaxAmount">
+		<isd:java class="onjava.SoapService" static="false" />
+	</isd:provider>
+	<isd:mappings>
+		<isd:map
+			encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+			xmlns:x="urn:onjavaserver" qname="x:onjava.Person"
+			javaType="onjava.Person"
+			java2XMLClassName="org.apache.soap.encoding.soapenc.BeanSerializer"
+			xml2JavaClassName="org.apache.soap.encoding.soapenc.BeanSerializer" />
+		<isd:map
+			encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+			xmlns:x="urn:onjavaserver" qname="x:onjava.Address"
+			javaType="onjava.Address"
+			java2XMLClassName="org.apache.soap.encoding.soapenc.BeanSerializer"
+			xml2JavaClassName="org.apache.soap.encoding.soapenc.BeanSerializer" />
+	</isd:mappings>
 </isd:service>
